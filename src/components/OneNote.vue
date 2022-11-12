@@ -3,7 +3,7 @@
         <span class="notes__date">{{note.date}}</span>
         <h2 class="notes__name">{{note.title}}</h2>
         <h4 class="notes__descr">{{note.phone}}</h4> <!-- class="notes__descr" -->
-        <h4 class="notes__descr">{{note.tag}}</h4> <!-- class="notes__descr" -->
+        <!-- <h4 class="notes__descr">{{note.tag}}</h4> class="notes__descr" -->
         <h4 class="notes__descr">{{note.email}}</h4>
         <div class="notes__control">
             <a href="#" class="notes__edit" @click.prevent="edit(note)">
@@ -31,7 +31,7 @@
         state.value.modalTitle = note.title;
         state.value.modalEmail = note.email;
         state.value.modalPhone = note.phone;
-        state.value.modalTag = note.tag;
+        // state.value.modalTag = note.tag;
         state.value.curID = note.id;
         state.value.showModal = true;
     }

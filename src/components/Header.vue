@@ -14,7 +14,9 @@
                 <a href="#" class="back" @click.prevent="header = true; search = ''">
                     <img src="@/assets/img/back.svg" alt="">
                 </a>
+                
                 <input type="text" :placeholder="lang[lg].placeholder" name="search" class="header__input" required v-model="search">
+
                 <a href="#" class="close" @click.prevent="header = true; search = ''">
                     <img src="@/assets/img/close.svg" alt="">
                 </a>
@@ -28,7 +30,7 @@
     import { computed } from '@vue/runtime-core';
     import { state, lang } from '../store';
 
-    const header = ref(false);
+    const header = ref(true);
     const search = computed({
         get: () => state.value.search,
         set: val => state.value.search = val

@@ -1,6 +1,6 @@
 <template>
     <Header/>
-    <Notes :notes= "filterContactTag" />
+    <Notes :notes= "filterContactName" />
     <Modal v-show="state.showModal" />
     <a href="#" class="add__note" @click.prevent="state.showModal = true">
       <img src="@/assets/img/add-note.svg" alt="">
@@ -13,6 +13,7 @@
     import Modal from '@/components/Modal.vue';
     import { state } from './store';
     import { computed } from '@vue/runtime-core';
+    
     //поиск по имени
     const filterContactName = computed(() => { //filterNotes
       return state.value.search ? 

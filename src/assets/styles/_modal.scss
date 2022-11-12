@@ -28,7 +28,7 @@
         margin-bottom: 16px;
         font-size: 24px;
         line-height: 32px;
-        color: #1c1b1f;
+        color: #000000;
     }
     &__input{
         display: block;
@@ -37,11 +37,11 @@
         padding: 8px 16px;
         font-size: 16px;
         line-height: 24px;
-        background: #E7E0EC;
-        border-radius: 4px 4px 0px 0px;
+        background: #000000;
+        border-radius: 50px;
         border-bottom: 1px solid #1c1b1f;
         &::placeholder{
-            color: #6750a4;
+            color: #ffffff;
         }
     }
     &__area{
@@ -57,10 +57,10 @@
         font-size: 14px;
         line-height: 20px;
         text-transform: uppercase;
-        color: #6750a4;
+        color: #000000;
         cursor: pointer;
     }
     &__cancel{
-        color: #cf1b1b;
+        color: #ff0000;
     }
 }

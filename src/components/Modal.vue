@@ -6,7 +6,7 @@
                 <form action="" class="modal__form" @submit.prevent="send">
                     <input type="text" :placeholder="lang[lg].name" required class="modal__input" v-model="title">
                     <input type="tel" class="modal__input" :placeholder="lang[lg].phoneNumber" required v-model="phone">
-                    <input type="text" class="modal__input" :placeholder="lang[lg].tag" v-model="tag">
+                    <!-- <input type="text" class="modal__input" :placeholder="lang[lg].tag" v-model="tag"> -->
                     <input type="email" :placeholder="lang[lg].email" class="modal__input" v-model="email">
                     <div class="modal__btns">
                         <a href="#" class="modal__cancel" @click.prevent="cleanModal">{{lang[lg].cancel}}</a>
@@ -29,10 +29,10 @@
         get: () => state.value.modalEmail,
         set: val => state.value.modalEmail = val
     });
-    const tag = computed({ //
-        get: () => state.value.modalTag,
-        set: val => state.value.modalTag = val
-    });
+    // const tag = computed({ //
+    //     get: () => state.value.modalTag,
+    //     set: val => state.value.modalTag = val
+    // });
     const phone = computed({
         get: () => state.value.modalPhone,
         set: val => state.value.modalPhone = val
@@ -46,7 +46,7 @@
         const obj = {
             title: title.value,
             email: email.value, //
-            tag: tag.value, //
+            // tag: tag.value, //
             phone: phone.value,
             date: new Date().toLocaleDateString(),
             id: id.value || uuidv4()
@@ -59,7 +59,7 @@
         title.value = '';
         phone.value = '';
         email.value = ''; //
-        tag.value = ''; //
+        // tag.value = ''; //
         id.value = null;
         state.value.showModal = false;
     }
