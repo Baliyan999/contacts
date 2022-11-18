@@ -2,7 +2,7 @@
     margin-top: 20px;
     position: relative;
     &-enter-active, &-leave-active{
-        transition: 0.3s linear;
+        transition: 0.2s linear;
     }
     &-enter-from, &-leave-to{
         opacity: 0;
